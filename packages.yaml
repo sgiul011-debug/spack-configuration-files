@@ -1,0 +1,8 @@
+packages:
+  all:
+    variants:
+    - ~gpfs
+    - +lustre
+    - file_systems=lustre
+    - backends=lustre
+    - schedulers=slurm
