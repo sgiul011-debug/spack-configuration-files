@@ -1,10 +1,13 @@
 packages:
   all:
     variants:
-    - cuda_arch=90
-    - +cuda
-  cuda:
-    spec: cuda@13.0.2+compat+cupti+samples~full samples_arch=90
-  gcc: 
-    spec: gcc@15.2.0 -bootstrap +nvptx
+    - -mpi
+    compiler:
+    - gcc@11.5.0 +bootstrap -nvptx
+  intel-oneapi-compilers: 
+    require:
+    - "@2025.3.2"
+  nvhpc:
+    require:
+    - "@25.11"
     
