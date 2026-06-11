@@ -1,0 +1,10 @@
+config:
+  template_dirs:
+  - $SPACK_DEPLOY/templates/$SPACK_ROOT_MODULES_TEMPLATES_SUFFIX
+  - $SPACK_DEPLOY/templates
+  build_stage:
+  - $tempdir
+  source_cache: $SPACK_ROOT_CACHE
+  install_tree:
+    root: $SPACK_ROOT_INSTALL
+  binary_index_root: $SPACK_ROOT_CACHE
