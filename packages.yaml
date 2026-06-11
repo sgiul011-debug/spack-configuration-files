@@ -1,8 +1,54 @@
 packages:
   all:
+    require: target=icelake
     variants:
     - ~gpfs
     - +lustre
     - file_systems=lustre
     - backends=lustre
     - schedulers=slurm
+packages:
+  gcc:
+    externals:
+    - spec: gcc@11.5.0 languages:='c,c++,fortran'
+      prefix: /usr
+      extra_attributes:
+        compilers:
+          c: /usr/bin/gcc
+          cxx: /usr/bin/g++
+          fortran: /usr/bin/gfortran
+  pmix:
+    externals:
+    - spec: pmix@3.2.3
+      prefix: /usr
+    buildable: false
+  openssl:
+    externals:
+    - spec: openssl@3.2.2
+      prefix: /usr
+    buildable: false
+  slurm:
+    externals:
+    - spec: slurm@24.11.5
+      prefix: /usr
+    buildable: false
+  rdma-core:
+    externals:
+    - spec: rdma-core@58.0
+      prefix: /usr
+    buildable: false
+  lustre:
+    externals:
+    - spec: lustre@2.14.0_ddn184
+      prefix: /usr
+    buildable: false
+  libevent:
+    externals:
+    - spec: libevent@2.1.12
+      prefix: /usr
+    buildable: false
+  hwloc:
+    externals:
+    - spec: hwloc@2.4.1 +cuda
+      prefix: /usr
+    buildable: false
