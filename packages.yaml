@@ -4,7 +4,7 @@ packages:
     - cuda_arch=90
     - +cuda
   cuda:
-    spec: cuda@13.0.2+compat+cupti+samples~full samples_arch=90
+    spec: cuda@12.6.0+compat+cupti+samples~full samples_arch=90
   gcc: 
-    spec: gcc@15.2.0 -bootstrap +nvptx
+    spec: gcc@13.4.0 -bootstrap +nvptx
     
