@@ -1,0 +1,134 @@
+modules:
+  default:
+    tcl:
+      exclude:
+      - glibc%gcc@11.5.0
+      - gcc-runtime%gcc@11.5.0
+      - knem
+      - pmix
+      - cuda
+      - lustre
+      - openssl
+      - slurm
+      - libevent
+      - rdma-core
+      - hwloc
+      projections:
+        nag-library: '{name}/mark{version}--binary'
+        star-ccm-plus: 'starccm+/{version}'
+        cutensor: '{name}/{version}--cuda--{^cuda.version}'
+        intel-oneapi-mkl +cluster: '{name}/{version}--{^mpi.name}--{^mpi.version}--{compiler.name}--{compiler.version}'
+        namd ^charmpp backend=multicore: '{name}/{version}--{compiler.name}--{compiler.version}'
+        gromacs ~mpi: '{name}/{version}--{compiler.name}--{compiler.version}'
+        ^mpi: '{name}/{version}--{^mpi.name}--{^mpi.version}--{compiler.name}--{compiler.version}'
+        'python %gcc@11.5.0': '{name}/{version}--{compiler.name}--{compiler.version}' 
+        '%intel-oneapi-compilers': '{name}/{version}--{compiler.name}--{compiler.version}'
+        '%gcc@11.5.0': '{name}/{version}'
+        '%gcc': '{name}/{version}--{compiler.name}--{compiler.version}'
+        '%nvhpc': '{name}/{version}--{compiler.name}--{compiler.version}'
+        '%intel-oneapi-compilers-classic': '{name}/{version}--{compiler.name}--{compiler.version}'
+        '%aocc': '{name}/{version}--{compiler.name}--{compiler.version}'
+        '%llvm': '{name}/{version}--{compiler.name}--{compiler.version}'
+        all: '{name}/{version}'
+      hash_length: 0
+      hide_implicits: true
+      all:
+        autoload: direct
+        environment:
+          set:
+            '{name}_HOME': '{prefix}'
+        conflict:
+        - '{name}'
+        template: plain-modules.tcl
+      gcc:
+        autoload: run
+        environment:
+          set:
+            CC: gcc
+            CXX: g++
+            FC: gfortran
+            F90: gfortran
+            F77: gfortran
+      hdf5:
+        suffixes:
+          +threadsafe: threadsafe
+      petsc:
+        suffixes:
+          +complex: complex
+          +mumps: mumps
+      fftw:
+        suffixes:
+          +openmp: openmp
+      quantum-espresso:
+        suffixes:
+          ^openblas: openblas
+          ^netlib-lapack: netlib-lapack
+          ^intel-oneapi-mkl: mkl
+      vasp:
+        suffixes:
+          +dftd4: dftd4
+      openblas:
+        suffixes:
+          +ilp64: ilp64
+      python:
+        suffixes:
+          +tkinter: tk
+      boost:
+        suffixes:
+          +atomic: atomic
+      libxc:
+        suffixes:
+          +fhc: fhc
+      intel-oneapi-mpi:
+        environment:
+          set:
+            I_MPI_PMI_LIBRARY: /usr/lib64/libpmi.so
+            # if the default mellanox provider doesn't work set a different one for IB as verbs 
+            UCX_TLS: 'self,mm,dc_mlx5'
+            MPICC: mpiicx
+            MPICXX: mpiicpx
+            MPIF90: mpiifx
+            MPIF77: mpiifx
+            MPIFC: mpiifx
+      intel-oneapi-mkl:
+        environment:
+          prepend_path:
+            '{name}_LIB': '{PREFIX}/mkl/latest/lib/intel64'
+      nvhpc@25.11:
+        environment:
+          prepend_path:
+            LD_LIBRARY_PATH: '{prefix}/Linux_x86_64/{version}/math_libs/lib64:{PREFIX}/Linux_x86_64/{version}/cuda/lib64:{PREFIX}/Linux_x86_64/{version}/cuda/13.0/extras/CUPTI/lib64:{PREFIX}/Linux_x86_64/{version}/compilers/extras/qd/lib:{PREFIX}/Linux_x86_64/{version}/comm_libs/nccl/lib:{PREFIX}/Linux_x86_64/{version}/comm_libs/nvshmem/lib'
+            PATH: '{PREFIX}/Linux_x86_64/{version}/cuda/bin:{PREFIX}/Linux_x86_64/{version}/compilers/extras/qd/bin'
+            CPATH: '{PREFIX}/Linux_x86_64/{version}/math_libs/include:{PREFIX}/Linux_x86_64/{version}/comm_libs/nccl/include:{PREFIX}/Linux_x86_64/{version}/comm_libs/nvshmem/include:{PREFIX}/Linux_x86_64/{version}/compilers/extras/qd/include/qd'
+      openmpi:
+        environment:
+          set:
+            OMPI_MCA_opal_warn_on_missing_libcuda: '0'
+            HWLOC_HIDE_ERRORS: '2'
+      hpcx-mpi:
+        environment:
+          set:
+            OMPI_MCA_opal_warn_on_missing_libcuda: '0'
+            HWLOC_HIDE_ERRORS: '2'
+    roots:
+      tcl: $SPACK_ROOT_MODULES
+    arch_folder: false
+  prefix_inspections:
+      lib:
+      - '{name}_LIB'
+      - LIBRARY_PATH
+      - LD_LIBRARY_PATH
+      lib64:
+      - '{name}_LIB'
+      - LIBRARY_PATH
+      - LD_LIBRARY_PATH
+      include:
+      - '{name}_INC'
+      - '{name}_INCLUDE'
+      - C_INCLUDE_PATH
+      - CPLUS_INCLUDE_PATH
+      - CPATH
+             
+            
+             
+
