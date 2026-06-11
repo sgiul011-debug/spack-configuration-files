@@ -1,4 +1,3 @@
-spack:
-  concretizer:
-    targets:
-      host_compatible: false
+concretizer:
+  targets:
+    host_compatible: false
