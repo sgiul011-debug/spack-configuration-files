@@ -1,6 +1,6 @@
 packages:
   all:
-    require: target=icelake
+    require: target=zen4
     variants:
     - ~gpfs
     - +lustre
