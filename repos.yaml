@@ -1,0 +1,6 @@
+repos: 
+  filtered_develop_036fc05: ${SPACK_DEPLOY}/repos/filtered_develop_036fc05
+  cineca_2026-02: ${SPACK_DEPLOY}/repos/cineca_2026-02
+  cineca_new: ${SPACK_DEPLOY}/repos/cineca_new
+  2026-02: ${SPACK_DEPLOY}/repos/2026-02/repos/spack_repo/builtin
+  rcm: $SPACK_REPO_DIR_01
