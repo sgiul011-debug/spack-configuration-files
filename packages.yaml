@@ -4,12 +4,19 @@ packages:
     - -mpi
     compiler:
     - gcc@11.5.0 +bootstrap -nvptx
+  gcc:
+    spec: gcc@15.2.0 -bootstrap
   intel-oneapi-compilers: 
     require:
     - "@2025.3.2"
   nvhpc:
     require:
     - "@25.11"
+  aocc:
+    require:
+    - "@5.1.0"
   llvm:
     require:
     - "@21.1.4"
+  
+    
