@@ -10,4 +10,5 @@ packages:
   nvhpc:
     require:
     - "@25.11"
-    
+  gcc: 
+    spec: gcc@15.2.0 -bootstrap 
