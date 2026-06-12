@@ -12,3 +12,6 @@ packages:
     - "@25.11"
   gcc: 
     spec: gcc@15.2.0 -bootstrap 
+  llvm:
+    require:
+    - "@21.1.4"
