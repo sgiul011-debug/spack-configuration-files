@@ -1,13 +1,29 @@
 packages:
   all:
     variants:
-    - -mpi
+    - +mpi
     compiler:
     - gcc@15.2.0 ~bootstrap+nvptx
   namd: 
     require:
     - "@3.0.2"
-  nccl:
+  openmpi:
     require:
-    - "@2.29.2-1"
-    
+    - "@4.1.6"
+    - fabrics=ucx,ucc,cma ~gpfs +lustre
+  elpa:
+    require:
+    - "@2024.03.001"
+  ucc:
+    externals:
+    - spec: ucc@1.6.0
+      prefix: /cineca/prod/spack/07/install/linux-zen4/nvhpc-25.11-kv23bdcddbvo3txmggqecr7mfhz2tqq7/Linux_x86_64/25.11/comm_libs/13.0/
+hpcx/hpcx-2.25.1/ucc
+    buildable: false
+  ucx:
+    externals:
+    - spec: ucx@1.20.0 +cuda +thread_multiple
+      prefix: /cineca/prod/spack/07/install/linux-zen4/nvhpc-25.11-kv23bdcddbvo3txmggqecr7mfhz2tqq7/Linux_x86_64/25.11/comm_libs/13.0/
+hpcx/hpcx-2.25.1/ucx
+    buildable: false
+  
