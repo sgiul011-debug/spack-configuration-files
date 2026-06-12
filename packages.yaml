@@ -18,5 +18,8 @@ packages:
   llvm:
     require:
     - "@21.1.4"
+  python:
+    - require:
+    - "@3.14"
   
     
