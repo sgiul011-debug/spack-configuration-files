@@ -4,15 +4,18 @@ packages:
     - +mpi
     compiler:
     - nvhpc@25.11
-  quantum-espresso: 
+  yambo: 
     require:
-    - "@7.5"
-  vasp:
+    - "@5.3.0"
+  devicexlib:
     require:
-    - "@6.4.3"
-  wannier90:
-    require:
-    - "@3.1.0"
+    - "@0.9.0"
+  #vasp:
+  #  require:
+  #  - "@6.4.3"
+  #wannier90:
+  #  require:
+  #  - "@3.1.0"
   hpcx-mpi:
     require:
     - "@2.25.1"
