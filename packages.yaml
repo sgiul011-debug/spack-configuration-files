@@ -3,11 +3,11 @@ packages:
     variants:
     - -mpi
     compiler:
-    - gcc@11.5.0 +bootstrap -nvptx
-  intel-oneapi-compilers: 
+    - gcc@15.2.0 ~bootstrap+nvptx
+  namd: 
     require:
-    - "@2025.3.2"
-  nvhpc:
+    - "@3.0.2"
+  nccl:
     require:
-    - "@25.11"
+    - "@2.29.2-1"
     
