@@ -11,7 +11,4 @@ packages:
     - +samples~full 
     - samples_arch=90
   gcc: 
-    require:
-    - "@gcc@13.4.0" 
-    - -bootstrap 
-    - +nvptx
+    spec: gcc@13.4.0 -bootstrap +nvptx
