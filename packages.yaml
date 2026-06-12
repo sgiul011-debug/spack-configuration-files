@@ -4,6 +4,12 @@ packages:
     - -mpi
     compiler:
     - gcc@15.2.0 ~bootstrap+nvptx
+  openssl:
+    require:
+    - "@3.2.2"
+  gromacs:
+    require:
+    - "@2026.0"
   namd: 
     require:
     - "@3.0.2"
