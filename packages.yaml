@@ -21,5 +21,10 @@ packages:
   python:
     - require:
     - "@3.14"
-  
+  idl:
+    require:
+    - "@8.5"
+  nag-library:
+    require:
+    - "@27"
     
