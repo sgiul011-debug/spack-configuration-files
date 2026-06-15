@@ -2,8 +2,8 @@ packages:
   all:
     variants:
     - -mpi
-    compiler:
-    - gcc@11.5.0 +bootstrap -nvptx
+    prefer:
+    - "%gcc@11.5.0 +bootstrap -nvptx"    
   gcc:
     version: [15.2.0] 
     variants:
