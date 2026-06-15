@@ -5,7 +5,9 @@ packages:
     compiler:
     - gcc@11.5.0 +bootstrap -nvptx
   gcc:
-    spec: gcc@15.2.0 -bootstrap
+    version: [15.2.0] 
+    variants:
+    - -bootstrap  
   intel-oneapi-compilers: 
     require:
     - "@2025.3.2"
@@ -19,7 +21,7 @@ packages:
     require:
     - "@21.1.4"
   python:
-    - require:
+    require:
     - "@3.14"
   idl:
     require:
