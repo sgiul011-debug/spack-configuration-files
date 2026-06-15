@@ -11,6 +11,9 @@ packages:
     - +samples~full 
     - samples_arch=90
   gcc: 
-    spec: gcc@15.2.0 -bootstrap +nvptx
+    variants:
+    - -bootstrap
+    version: [15.2.0]
+   
     
     
