@@ -1,1 +1,6 @@
+upstreams: 
+  upstream-production:
+    install_tree: ${SPACK_DEPLOY}/${SPACK_DEPLOY_INSTANCE}/install
+  upstream-production-01:
+    install_tree: $SPACK_UPSTREAM_INSTALL_DIR_01
 
