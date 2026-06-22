@@ -1,0 +1,7 @@
+include:
+- $SPACK_DEPLOY/config_files/pitagora_site/concretizer.yaml
+- $SPACK_DEPLOY/config_files/pitagora_site/config.yaml
+- $SPACK_DEPLOY/config_files/pitagora_site/modules.yaml 
+- $SPACK_DEPLOY/config_files/pitagora_site/packages.yaml
+- $SPACK_DEPLOY/config_files/pitagora_site/repos.yaml
+- $SPACK_DEPLOY/config_files/pitagora_site/upstreams.yaml
