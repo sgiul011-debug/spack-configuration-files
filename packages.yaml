@@ -12,7 +12,7 @@ packages:
     - samples_arch=90
   gcc: 
     variants:
-    - -bootstrap
+    - -bootstrap +nvptx
     version: [15.2.0]
    
     
