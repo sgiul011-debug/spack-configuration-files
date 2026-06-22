@@ -14,6 +14,9 @@ packages:
     variants:
     - -bootstrap +nvptx
     version: [15.2.0]
+  yambo:
+    variants:
+    - +cuda-fortran 
    
     
     
