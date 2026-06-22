@@ -94,7 +94,7 @@ modules:
         environment:
           prepend_path:
             '{name}_LIB': '{PREFIX}/mkl/latest/lib/intel64'
-      nvhpc@25.11:
+      nvhpc:
         environment:
           prepend_path:
             LD_LIBRARY_PATH: '{prefix}/Linux_x86_64/{version}/math_libs/lib64:{PREFIX}/Linux_x86_64/{version}/cuda/lib64:{PREFIX}/Linux_x86_64/{version}/cuda/13.0/extras/CUPTI/lib64:{PREFIX}/Linux_x86_64/{version}/compilers/extras/qd/lib:{PREFIX}/Linux_x86_64/{version}/comm_libs/nccl/lib:{PREFIX}/Linux_x86_64/{version}/comm_libs/nvshmem/lib'
