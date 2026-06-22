@@ -5,8 +5,8 @@ packages:
     prefer:
     - "%nvhpc@25.11"
   openssl:
-    version: [3.2.2]
-    variants:
+    require:
+    -"@3.2.2"
     - build_system=generic 
     - certs=mozilla 
     - ~docs 
@@ -15,8 +15,8 @@ packages:
     variants:
     - ~cuda
   quantum-espresso: 
-    version: [7.5]
-    variants: 
+    require: 
+    - "@7.5" 
     - +mpigpu
     - +natx
     - ~scalapack 
@@ -24,23 +24,24 @@ packages:
     - ~phonon 
     - build_type=RelWithDebInfo
   vasp:
-    version: [6.4.3]
+    require: 
+    - "@6.4.3"
     variants:
     - ~libxc
     - +wannier90
     - +openmp 
     - +hdf5 
     - +fftlib
-  wannier:
-    version: [90@3.1.0]
-    variants: 
+  wannier90:
+    require: 
+    - "@3.1.0"
     - +wannier2vasp
   scorep:
     variants:
     - +papi
   yambo:
-    version: [5.3.0]
-    variants: 
+    require: 
+    - "5.3.0" 
     - +openmp
     - +memory
     - +time
