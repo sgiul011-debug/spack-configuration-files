@@ -2,23 +2,65 @@ packages:
   all:
     variants:
     - +mpi
-    compiler:
-    - nvhpc@25.11
+    prefer:
+    - "%nvhpc@25.11"
+  openssl:
+    version: [3.2.2]
+    variants:
+    - build_system=generic 
+    - certs=mozilla 
+    - ~docs 
+    - +shared' 
+  libxc:
+    variants:
+    - ~cuda
   quantum-espresso: 
-    require:
-    - "@7.5"
+    version: [7.5]
+    variants: 
+    - +mpigpu
+    - +natx
+    - ~scalapack 
+    - +libxc 
+    - ~phonon 
+    - build_type=RelWithDebInfo
   vasp:
-    require:
-    - "@6.4.3"
-  wannier90:
-    require:
-    - "@3.1.0"
+    version: [6.4.3]
+    variants:
+    - ~libxc
+    - +wannier90
+    - +openmp 
+    - +hdf5 
+    - +fftlib
+  wannier:
+    version: [90@3.1.0]
+    variants: 
+    - +wannier2vasp
+  scorep:
+    variants:
+    - +papi
   hpcx-mpi:
-    require:
-    - "@2.25.1"
-  hpcx-mpi:
+    version: [2.25.1]
     externals:
     - spec: hpcx-mpi@2.25.1
         prefix: /cineca/prod/spack/07/install/linux-zen4/nvhpc-25.11-kv23bdcddbvo3txmggqecr7mfhz2tqq7/Linux_x86_64/25.11/comm_libs/13.0/
 hpcx/hpcx-2.25.1/ompi
     buildable: false
+  slepc:
+    variants:
+    - -arpack
+  boost:
+    variants:
+    - cxxstd=14
+  hdf5:
+    variants:
+    - +hl 
+  netcdf-c:
+    variants:
+    - +parallel-netcdf
+  petsc:
+    - +mumps 
+    - +fftw   
+    - +double 
+    - ~fortran-bindings 
+
+
