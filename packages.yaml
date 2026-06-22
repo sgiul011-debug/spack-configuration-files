@@ -12,3 +12,7 @@ packages:
     - samples_arch=90
   gcc: 
     spec: gcc@13.4.0 -bootstrap +nvptx
+  yambo:
+    variants:
+    - +cuda-fortran 
+     
