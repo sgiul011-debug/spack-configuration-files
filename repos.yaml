@@ -2,5 +2,6 @@ repos:
   cineca_site: ${SPACK_DEPLOY}/repos/cineca_$SPACK_REPO_SITE_VERSION
   cineca_new: ${SPACK_DEPLOY}/repos/cineca_new
   site: ${SPACK_DEPLOY}/repos/$SPACK_REPO_SITE_VERSION/repos/spack_repo/builtin
-  defaults: ${SPACK_DEPLOY}/repos/$SPACK_REPO_DEFAULTS_VERSION
+  builtin: 
+    destination: ${SPACK_DEPLOY}/repos/$SPACK_REPO_DEFAULTS_VERSION
 
