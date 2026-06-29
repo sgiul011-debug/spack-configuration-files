@@ -97,7 +97,7 @@ modules:
       nvhpc:
         environment:
           prepend_path:
-            LD_LIBRARY_PATH: '{prefix}/Linux_x86_64/{version}/math_libs/lib64:{PREFIX}/Linux_x86_64/{version}/cuda/lib64:{PREFIX}/Linux_x86_64/{version}/cuda/13.0/extras/CUPTI/lib64:{PREFIX}/Linux_x86_64/{version}/compilers/extras/qd/lib:{PREFIX}/Linux_x86_64/{version}/comm_libs/nccl/lib:{PREFIX}/Linux_x86_64/{version}/comm_libs/nvshmem/lib'
+            LD_LIBRARY_PATH: '{prefix}/Linux_x86_64/{version}/math_libs/lib64:{PREFIX}/Linux_x86_64/{version}/cuda/lib64:{PREFIX}/Linux_x86_64/{version}/cuda/latest/extras/CUPTI/lib64:{PREFIX}/Linux_x86_64/{version}/compilers/extras/qd/lib:{PREFIX}/Linux_x86_64/{version}/comm_libs/nccl/lib:{PREFIX}/Linux_x86_64/{version}/comm_libs/nvshmem/lib'
             PATH: '{PREFIX}/Linux_x86_64/{version}/cuda/bin:{PREFIX}/Linux_x86_64/{version}/compilers/extras/qd/bin'
             CPATH: '{PREFIX}/Linux_x86_64/{version}/math_libs/include:{PREFIX}/Linux_x86_64/{version}/comm_libs/nccl/include:{PREFIX}/Linux_x86_64/{version}/comm_libs/nvshmem/include:{PREFIX}/Linux_x86_64/{version}/compilers/extras/qd/include/qd'
       openmpi:
