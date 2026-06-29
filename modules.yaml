@@ -111,7 +111,7 @@ modules:
             OMPI_MCA_opal_warn_on_missing_libcuda: '0'
             HWLOC_HIDE_ERRORS: '2'
     roots:
-      tcl: $SPACK_ROOT_MODULES
+      tcl: $SPACK_DEPLOY/$SPACK_DEPLOY_INSTANCE/modules
     arch_folder: false
   prefix_inspections:
       lib:
