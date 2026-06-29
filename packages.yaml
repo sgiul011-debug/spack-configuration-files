@@ -13,7 +13,7 @@ packages:
   gcc: 
     variants:
     - -bootstrap +nvptx
-    version: [15.2.0]    
+    version: [13.4.0]    
   llvm:
     require:
     - -cuda
