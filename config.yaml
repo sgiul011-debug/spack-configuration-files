@@ -4,7 +4,7 @@ config:
   - $SPACK_DEPLOY/templates
   build_stage:
   - $tempdir
-  source_cache: $SPACK_ROOT_CACHE
+  source_cache: $SPACK_DEPLOY/$SPACK_DEPLOY_INSTANCE/cache
   install_tree:
-    root: $SPACK_ROOT_INSTALL
-  binary_index_root: $SPACK_ROOT_CACHE
+    root: $SPACK_DEPLOY/$SPACK_DEPLOY_INSTANCE/install
+  binary_index_root: $SPACK_DEPLOY/$SPACK_DEPLOY_INSTANCE/cache
