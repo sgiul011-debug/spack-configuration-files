@@ -19,7 +19,11 @@ packages:
     - +license-agreed
   llvm:
     require:
-    - "@21.1.4"
+    - "@22.1.5"
+    - +clang 
+    - +flang  
+    - ~offload 
+    - ~libomptarget 
   python:
     require:
     - "@3.14"
