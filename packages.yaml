@@ -1,7 +1,4 @@
 packages:
-  all:
-    variants:
-    - -mpi   
   intel-oneapi-compilers: 
     require:
     - "@2025.3.2"
