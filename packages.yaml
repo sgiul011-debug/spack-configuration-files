@@ -16,6 +16,7 @@ packages:
   aocc:
     require:
     - "@5.1.0"
+    - +license-agreed
   llvm:
     require:
     - "@21.1.4"
