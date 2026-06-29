@@ -1,7 +1,15 @@
 packages:
+  binutils:
+    require:
+    - +ld 
+    - +gas 
+    - -gold
   intel-oneapi-compilers: 
     require:
     - "@2025.3.2"
+  intel-oneapi-mkl:
+    require:
+    - +cluster
   nvhpc:
     require:
     - "@25.11"
@@ -20,4 +28,5 @@ packages:
   nag-library:
     require:
     - "@27"
+  
     
