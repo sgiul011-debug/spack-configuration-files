@@ -1,9 +1,7 @@
 packages:
   all:
     variants:
-    - -mpi
-    prefer:
-    - "%gcc@11.5.0 +bootstrap -nvptx"    
+    - -mpi   
   intel-oneapi-compilers: 
     require:
     - "@2025.3.2"
