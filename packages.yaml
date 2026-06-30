@@ -5,8 +5,8 @@ packages:
     - +gas 
     - -gold
   intel-oneapi-compilers: 
-    require:
-    - "@2025.3.2"
+    version:
+    - 2025.3.2
   intel-oneapi-mkl:
     require:
     - +cluster
