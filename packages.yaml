@@ -6,6 +6,7 @@ packages:
   cuda:
     require:
     - "@12.6.0"
+    variants:
     - +compat
     - +cupti
     - +samples~full 
@@ -20,4 +21,10 @@ packages:
   yambo:
     variants:
     - +cuda-fortran 
+  nvhpc:
+    require:
+    - "^gcc@13.4.0"
+  intel-oneapi-compilers:
+    require:
+    - "^gcc@13.4.0"
      
