@@ -33,5 +33,7 @@ packages:
   nag-library:
     require:
     - "@27"
-  
+  zlib-api:
+    require:
+    - zlib-ng
     
