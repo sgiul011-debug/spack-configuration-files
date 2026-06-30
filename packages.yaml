@@ -6,6 +6,7 @@ packages:
   cuda:
     require:
     - "@13.0.2"
+    variants:
     - +compat
     - +cupti
     - +samples~full 
