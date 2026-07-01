@@ -19,7 +19,7 @@ packages:
     - build-target=charm++
   openblas:
     require:
-    - ilp64 
+    - -ilp64 
     - threads=openmp
   fftw: 
     require:
