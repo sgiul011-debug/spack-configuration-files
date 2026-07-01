@@ -11,4 +11,7 @@ packages:
   nccl:
     require:
     - "@2.29.2-1"
+  zlib-api:
+    require:
+    - zlib-ng    
     
