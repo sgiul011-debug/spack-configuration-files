@@ -5,13 +5,53 @@ packages:
   gromacs:
     require:
     - "@2026.0"
+    - ~mpi
+    - +openmp
+    - ~plumed
   namd: 
     require:
     - "@3.0.2"
+    - +single_node_gpu 
+    - interface=tcl
+  charmpp:
+    require:
+    - backend=multicore 
+    - build-target=charm++
+  openblas:
+    require:
+    - ilp64 
+    - threads=openmp
+  fftw: 
+    require:
+    - -mpi
+  libxc:
+    require:
+    - ~cuda  
   nccl:
     require:
     - "@2.29.2-1"
   zlib-api:
     require:
     - zlib-ng    
-    
+  boost:
+    require:
+    - +container
+  hdf5:
+    require:
+    - +cxx
+    - -threadsafe  
+    - -mpi
+  netcdf-c: 
+    require:
+    - -mpi    
+  gdal:
+    require:
+    - +python
+  gmt:
+    require:
+    - +ffmpeg  
+    - "^json-c +ipo"
+  gsl:
+    require:
+    - +external-cblas
+  
