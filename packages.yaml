@@ -4,10 +4,9 @@ packages:
     - -mpi
   gromacs:
     require:
-    - "@2026.0"
+    - "@2026.1"
     - ~mpi
     - +openmp
-    - ~plumed
   namd: 
     require:
     - "@3.0.2"
