@@ -47,10 +47,10 @@ packages:
   gdal:
     require:
     - +python
+    - "^json-c +ipo"
   gmt:
     require:
     - +ffmpeg  
-    - "^json-c +ipo"
   gsl:
     require:
     - +external-cblas
