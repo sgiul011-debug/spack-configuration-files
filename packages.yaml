@@ -29,5 +29,5 @@ packages:
     variants:
       - +cuda_mps
       - +kokkos
-      - - fft_kokkos=cufft 
+      - fft_kokkos=cufft 
     
