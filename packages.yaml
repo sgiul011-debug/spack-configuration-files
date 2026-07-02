@@ -2,18 +2,114 @@ packages:
   all:
     variants:
     - +mpi
-    compiler:
-    - gcc@15.2.0 ~bootstrap+nvptx
+    #compiler:
+    #- gcc@15.2.0 ~bootstrap+nvptx
+  boost:
+    variants:
+    - +container 
+    - +mpi    
+  hdf5:
+    variants:
+    - +hl
+  netcdf-c:
+    variants:
+    - +mpi 
+    - +parallel-netcdf
+  osu-micro-benchmarks:
+    variants:
+    - ~xccl
+  petsc:
+    variants:
+    - +mpi 
+    - +mumps 
+    - +scalapack 
+    - +fftw 
+  gsl: 
+    variants:
+    - +external-cblas  
+  plumed:
+    require:
+    - "@2.10.0"
+  gromacs:
+    variants:
+    - +mpi
+    - +openmp
   namd: 
     require:
     - "@3.0.2"
+    variants:
+    - fftw=3  
+  charmpp:
+    variants:
+    - backend=mpi  
+    - +smp 
+    - +production 
+    - +omp  
+  cp2k:
+    require:
+    - "@2026.1"
+    variants:
+    - +mpi
+    - +plumed
+    - +openmp 
+    - smm=blas 
+    - lmax=6
   openmpi:
     require:
     - "@4.1.6"
-    - fabrics=ucx,ucc,cma ~gpfs +lustre
+    variants:
+    - +legacylaunchers
+    - ~wrapper-rpath
+    - ~static
+    - fabrics=ucx,ucc,cma 
+    #- ~gpfs 
+    #- +lustre
+    - ~internal-pmix 
+    - ~internal-hwloc 
+  openblas:
+    variants:
+    - -ilp64 
+    - threads=openmp
+  fftw:
+    variants:
+    - +mpi 
+    - ~openmp  
   elpa:
     require:
     - "@2024.03.001"
+    varinats:
+    - -openmp
+  parallelio:
+    variants:
+    - +pnetcdf  
+  esmf:
+    variants:
+    - +external-lapack 
+    - +pnetcdf  
+  lammps:
+    variants:
+    - +diffraction
+    - +meam
+    - +ml-snap 
+    - +ml-pace 
+    - +reaction 
+    - +reaxff 
+    - +voronoi 
+    - +yaff 
+    - ~intel 
+    - ~kim 
+    - +asphere 
+    - +class2
+    - +kspace 
+    - +manybody 
+    - +molecule 
+    - +extra-dump 
+    - +opt 
+    - +replica
+    - +rigid
+    - +granular 
+    - +openmp-package 
+    - +openmp  
   ucc:
     externals:
     - spec: ucc@1.6.0
