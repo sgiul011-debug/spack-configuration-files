@@ -21,6 +21,9 @@ packages:
   yambo:
     variants:
     - +cuda-fortran 
+  gromacs:
+    require:
+    - "2026.1"
    
     
     
