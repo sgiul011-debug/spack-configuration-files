@@ -24,6 +24,10 @@ packages:
   gromacs:
     require:
     - "2026.1"
-   
+  lammps:
+    variants:
+       +cuda_mps
+       +kokkos
+       - fft_kokkos=cufft 
     
     
