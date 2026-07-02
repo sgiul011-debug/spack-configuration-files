@@ -25,4 +25,9 @@ packages:
     require:
     - "@2025.0"
     - -plumed
-  
+  lammps:
+    variants:
+      - +cuda_mps
+      - +kokkos
+      - - fft_kokkos=cufft 
+    
