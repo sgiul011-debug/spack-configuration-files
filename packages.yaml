@@ -21,10 +21,7 @@ packages:
   yambo:
     variants:
     - +cuda-fortran 
-  nvhpc:
+  gromacs:
     require:
-    - "^gcc@13.4.0"
-  intel-oneapi-compilers:
-    require:
-    - "^gcc@13.4.0"
-     
+    - "@2025.0"
+  
