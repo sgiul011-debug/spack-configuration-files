@@ -1,0 +1,6 @@
+concretizer:
+  reuse:
+    roots: true
+    exclude:
+    - "%gcc@15.2.0"
+
