@@ -4,7 +4,7 @@ packages:
     - -mpi
   gromacs:
     require:
-    - "@2026.1"
+    - "@2025.0"
     - ~mpi
     - +openmp
   namd: 
