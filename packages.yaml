@@ -77,7 +77,7 @@ packages:
   elpa:
     require:
     - "@2024.03.001"
-    varinats:
+    variants:
     - -openmp
   parallelio:
     variants:
@@ -113,13 +113,11 @@ packages:
   ucc:
     externals:
     - spec: ucc@1.6.0
-      prefix: /cineca/prod/spack/07/install/linux-zen4/nvhpc-25.11-kv23bdcddbvo3txmggqecr7mfhz2tqq7/Linux_x86_64/25.11/comm_libs/13.0/
-hpcx/hpcx-2.25.1/ucc
+      prefix: $(spack location -i nvhpc ^gcc@15.2.0)/Linux_x86_64/25.11/comm_libs/latest/hpcx/hpcx-2.25.1/ucc
     buildable: false
   ucx:
     externals:
     - spec: ucx@1.20.0 +cuda +thread_multiple
-      prefix: /cineca/prod/spack/07/install/linux-zen4/nvhpc-25.11-kv23bdcddbvo3txmggqecr7mfhz2tqq7/Linux_x86_64/25.11/comm_libs/13.0/
-hpcx/hpcx-2.25.1/ucx
+      prefix: $(spack location -i nvhpc ^gcc@15.2.0)/Linux_x86_64/25.11/comm_libs/latest/hpcx/hpcx-2.25.1/ucx
     buildable: false
   
