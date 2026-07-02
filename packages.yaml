@@ -24,4 +24,5 @@ packages:
   gromacs:
     require:
     - "@2025.0"
+    - -plumed
   
