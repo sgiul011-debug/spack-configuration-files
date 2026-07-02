@@ -7,6 +7,7 @@ packages:
     - "@2025.0"
     - ~mpi
     - +openmp
+    #- ~plumed
   namd: 
     require:
     - "@3.0.2"
@@ -50,6 +51,7 @@ packages:
   gmt:
     require:
     - +ffmpeg  
+    #- "^json-c +ipo"
   gsl:
     require:
     - +external-cblas
