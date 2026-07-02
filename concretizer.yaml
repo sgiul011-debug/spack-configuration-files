@@ -1,0 +1,5 @@
+concretizer:
+  reuse:
+    roots: true
+    exclude:
+    - "%gcc@13.4.0"
