@@ -30,9 +30,3 @@ packages:
       - +cuda_mps
       - +kokkos
       - fft_kokkos=cufft 
-  libxc:
-    variants:
-    - cuda
-    
-    
-    
