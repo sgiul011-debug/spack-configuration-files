@@ -5,33 +5,6 @@ packages:
   libxc:
     variants:
     - ~cuda
-  quantum-espresso: 
-    require: 
-    - "@7.5" 
-    variants:
-    - +mpigpu
-    - +natx
-    - ~scalapack 
-    - +libxc 
-    - ~phonon 
-    - build_type=RelWithDebInfo
-  vasp:
-    require: 
-    - "@6.4.3"
-    variants:
-    - ~libxc
-    - +wannier90
-    - +openmp 
-    - +hdf5 
-    - +fftlib
-  wannier90:
-    require: 
-    - "@3.1.0"
-    variants:
-    - +wannier2vasp
-  scorep:
-    variants:
-    - +papi
   yambo:
     require: 
     - "@5.3.0" 
