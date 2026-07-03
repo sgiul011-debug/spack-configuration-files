@@ -24,11 +24,11 @@ packages:
     - +openmp 
     - +hdf5 
     - +fftlib
-  wannier:
+  wannier90:
     require:
-    - "@90@3.1.0"
+    - "@3.1.0"
     variants: 
-    - +wannier2vasp
+    - ~mpi
   scorep:
     variants:
     - +papi
@@ -37,8 +37,7 @@ packages:
     - "@2.25.1"
     externals:
     - spec: hpcx-mpi@2.25.1
-        prefix: /cineca/prod/spack/07/install/linux-zen4/nvhpc-25.11-kv23bdcddbvo3txmggqecr7mfhz2tqq7/Linux_x86_64/25.11/comm_libs/13.0/
-hpcx/hpcx-2.25.1/ompi
+      prefix: /cineca/prod/spack/07/install/linux-zen4/nvhpc-25.11-kv23bdcddbvo3txmggqecr7mfhz2tqq7/Linux_x86_64/25.11/comm_libs/13.0/hpcx/hpcx-2.25.1/ompi
     buildable: false
   slepc:
     variants:
@@ -53,6 +52,7 @@ hpcx/hpcx-2.25.1/ompi
     variants:
     - +parallel-netcdf
   petsc:
+    variants:
     - +mumps 
     - +fftw   
     - +double 
