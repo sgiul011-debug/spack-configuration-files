@@ -7,7 +7,7 @@ packages:
     - ~cuda
   quantum-espresso: 
     require:
-    - "@7.5.0"
+    - "@7.5"
     variants: 
     - +mpigpu
     - +natx
