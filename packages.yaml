@@ -2,8 +2,6 @@ packages:
   all:
     variants:
     - +mpi
-    #compiler:
-    #- gcc@15.2.0 ~bootstrap+nvptx
   boost:
     variants:
     - +container 
@@ -34,6 +32,7 @@ packages:
     variants:
     - +mpi
     - +openmp
+    - +plumed
   namd: 
     require:
     - "@3.0.2"
