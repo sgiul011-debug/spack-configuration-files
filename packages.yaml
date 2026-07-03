@@ -5,21 +5,21 @@ packages:
     #compiler:
     #- gcc@15.2.0 ~bootstrap+nvptx
   boost:
-    variants:
+    require:
     - +container 
     - +mpi    
   hdf5:
     variants:
     - +hl
   netcdf-c:
-    variants:
+    require:
     - +mpi 
     - +parallel-netcdf
   osu-micro-benchmarks:
     variants:
     - ~xccl
   petsc:
-    variants:
+    require:
     - +mpi 
     - +mumps 
     - +scalapack 
@@ -31,7 +31,7 @@ packages:
     require:
     - "@2.10.0"
   gromacs:
-    variants:
+    require:
     - +mpi
     - +openmp
   namd: 
@@ -40,7 +40,7 @@ packages:
     variants:
     - fftw=3  
   charmpp:
-    variants:
+    require:
     - backend=mpi  
     - +smp 
     - +production 
@@ -48,7 +48,6 @@ packages:
   cp2k:
     require:
     - "@2026.1"
-    variants:
     - +mpi
     - +plumed
     - +openmp 
@@ -71,9 +70,9 @@ packages:
     - -ilp64 
     - threads=openmp
   fftw:
-    variants:
+    require:
     - +mpi 
-    - ~openmp  
+    - +openmp  
   elpa:
     require:
     - "@2024.03.001"
@@ -85,7 +84,10 @@ packages:
   esmf:
     variants:
     - +external-lapack 
-    - +pnetcdf  
+    - +pnetcdf 
+  kokkos:
+    require:
+    - "@4.7.02" 
   lammps:
     variants:
     - +diffraction
@@ -113,11 +115,11 @@ packages:
   ucc:
     externals:
     - spec: ucc@1.6.0
-      prefix: $(spack location -i nvhpc ^gcc@15.2.0)/Linux_x86_64/25.11/comm_libs/latest/hpcx/hpcx-2.25.1/ucc
+      prefix: /cineca/prod/spack/7.1/install/linux-zen4/nvhpc-25.11-sucr4tx75kwothuksk6fg2ywzb5qvmw2/Linux_x86_64/25.11/comm_libs/13.0/hpcx/hpcx-2.25.1/ucc
     buildable: false
   ucx:
     externals:
     - spec: ucx@1.20.0 +cuda +thread_multiple
-      prefix: $(spack location -i nvhpc ^gcc@15.2.0)/Linux_x86_64/25.11/comm_libs/latest/hpcx/hpcx-2.25.1/ucx
+      prefix: /cineca/prod/spack/7.1/install/linux-zen4/nvhpc-25.11-sucr4tx75kwothuksk6fg2ywzb5qvmw2/Linux_x86_64/25.11/comm_libs/13.0/hpcx/hpcx-2.25.1/ucx
     buildable: false
   
