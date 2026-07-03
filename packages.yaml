@@ -30,4 +30,10 @@ packages:
       - +cuda_mps
       - +kokkos
       - fft_kokkos=cufft 
-    
+  kokkos:
+    require:
+    - +wrapper
+  libxc:
+    require:
+    - -cuda
+ 
