@@ -62,5 +62,8 @@ hpcx/hpcx-2.25.1/ompi
     - +fftw   
     - +double 
     - ~fortran-bindings 
+  libxc:
+    require:
+    - -cuda
 
 
