@@ -1,4 +1,8 @@
 packages:
+  gcc:
+    require:
+    - "@11.5.0"
+
   binutils:
     require:
     - +ld 
@@ -13,6 +17,7 @@ packages:
   nvhpc:
     require:
     - "@25.11"
+    - target=zen4
   aocc:
     require:
     - "@5.1.0"
@@ -23,17 +28,20 @@ packages:
     - +clang 
     - +flang  
     - ~offload 
-    - ~libomptarget 
+    - ~libomptarget
+    - -cuda 
   python:
     require:
     - "@3.14"
   idl:
     require:
     - "@8.5"
+    - target=zen4
   nag-library:
     require:
     - "@27"
+    - target=zen4
   zlib-api:
     require:
     - zlib-ng
-    
+      
