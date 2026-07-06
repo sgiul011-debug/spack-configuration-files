@@ -26,7 +26,25 @@ packages:
     require:
     - "@2026.1"
   lammps:
-    variants:
-      - +cuda_mps
-      - +kokkos
-      - fft_kokkos=cufft 
+    require:
+    - +cuda
+    - +cuda_mps
+    - +kokkos
+    - fft_kokkos=cufft
+    - cuda_arch=90
+  kokkos:
+    require:
+    - +wrapper
+    - +cuda_constexpr 
+  libxc:
+    require:
+    - -cuda 
+  namd:
+    require:
+    - +cuda 
+    - cuda_arch=90
+  vasp:
+    require:
+    - +cuda
+    - cuda_arch=90
+
