@@ -8,16 +8,9 @@ packages:
     - +ld 
     - +gas 
     - -gold
-  intel-oneapi-compilers: 
-    version:
-    - 2025.3.2
   intel-oneapi-mkl:
     require:
     - +cluster
-  nvhpc:
-    require:
-    - "@25.11"
-    - target=zen4
   aocc:
     require:
     - "@5.1.0"
