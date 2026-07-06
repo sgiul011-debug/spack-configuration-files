@@ -9,14 +9,16 @@ packages:
     - +container 
     - +mpi    
   hdf5:
-    variants:
+    #variants:
+    require:
     - +hl
   netcdf-c:
     require:
     - +mpi 
     - +parallel-netcdf
   osu-micro-benchmarks:
-    variants:
+    #variants:
+    require:
     - ~xccl
   petsc:
     require:
@@ -25,7 +27,8 @@ packages:
     - +scalapack 
     - +fftw 
   gsl: 
-    variants:
+    #variants:
+    require:
     - +external-cblas  
   plumed:
     require:
@@ -56,7 +59,8 @@ packages:
   openmpi:
     require:
     - "@4.1.6"
-    variants:
+    #variants:
+    require:
     - +legacylaunchers
     - ~wrapper-rpath
     - ~static
@@ -76,20 +80,25 @@ packages:
   elpa:
     require:
     - "@2024.03.001"
-    variants:
+    #variants:
+    require:
     - -openmp
   parallelio:
-    variants:
+    #variants:
+    require:
     - +pnetcdf  
   esmf:
-    variants:
+    #variants:
+    require:
     - +external-lapack 
     - +pnetcdf 
   kokkos:
     require:
     - "@4.7.02" 
   lammps:
-    variants:
+    #variants:
+    require:
+    - target=zen4
     - +diffraction
     - +meam
     - +ml-snap 
