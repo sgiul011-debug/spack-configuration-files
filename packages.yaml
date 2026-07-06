@@ -25,9 +25,11 @@ packages:
   libxc:
     require:
     - ~cuda  
+    - target=zen4  
   nccl:
     require:
     - "@2.29.2-1"
+    - target=zen4
   zlib-api:
     require:
     - zlib-ng    
