@@ -2,13 +2,16 @@ packages:
   all:
     variants:
     - +mpi
+  nvhpc:
+    require:
+    - "@25.11"    
   libxc:
     require:
     - ~cuda
   quantum-espresso: 
     require:
     - "@7.5"
-    variants: 
+    #variants: 
     - +mpigpu
     - +natx
     - ~scalapack 
@@ -18,7 +21,7 @@ packages:
   vasp:
     require: 
     - "@6.4.3"
-    variants:
+    #variants:
     - ~libxc
     - +wannier90
     - +openmp 
@@ -27,10 +30,11 @@ packages:
   wannier90:
     require:
     - "@3.1.0"
-    variants: 
+    #variants: 
     - ~mpi
   scorep:
-    variants:
+    #variants:
+    require:
     - +papi
   hpcx-mpi:
     require: 
@@ -40,21 +44,28 @@ packages:
       prefix: /cineca/prod/spack/07/install/linux-zen4/nvhpc-25.11-kv23bdcddbvo3txmggqecr7mfhz2tqq7/Linux_x86_64/25.11/comm_libs/13.0/hpcx/hpcx-2.25.1/ompi
     buildable: false
   slepc:
-    variants:
+    #variants:
+    require:
     - -arpack
   boost:
-    variants:
+    #variants:
+    require:
     - cxxstd=14
   hdf5:
-    variants:
+    require:
     - +hl 
   netcdf-c:
-    variants:
+    require:
     - +parallel-netcdf
   petsc:
-    variants:
+    #variants:
+    require:
     - +mumps 
     - +fftw   
     - +double 
     - ~fortran-bindings 
+  netlib-scalapack:
+    require:
+    - "@2.2.2"
+    
 
