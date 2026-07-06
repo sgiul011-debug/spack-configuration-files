@@ -30,17 +30,17 @@ packages:
     #variants:
     require:
     - +external-cblas  
-  plumed:
-    require:
-    - "@2.10.0"
+  #plumed:
+  #  require:
+  #  - "@2.10.0"
   gromacs:
     require:
     - +mpi
     - +openmp
   namd: 
     require:
-    - "@3.0.2"
-    variants:
+    #- "@3.0.2"
+    #variants:
     - fftw=3  
   charmpp:
     require:
@@ -50,7 +50,7 @@ packages:
     - +omp  
   cp2k:
     require:
-    - "@2026.1"
+    #- "@2026.1"
     - +mpi
     - +plumed
     - +openmp 
@@ -59,8 +59,6 @@ packages:
   openmpi:
     require:
     - "@4.1.6"
-    #variants:
-    require:
     - +legacylaunchers
     - ~wrapper-rpath
     - ~static
@@ -81,7 +79,6 @@ packages:
     require:
     - "@2024.03.001"
     #variants:
-    require:
     - -openmp
   parallelio:
     #variants:
@@ -124,11 +121,11 @@ packages:
   ucc:
     externals:
     - spec: ucc@1.6.0
-      prefix: /cineca/prod/spack/7.1/install/linux-zen4/nvhpc-25.11-sucr4tx75kwothuksk6fg2ywzb5qvmw2/Linux_x86_64/25.11/comm_libs/13.0/hpcx/hpcx-2.25.1/ucc
+      prefix: /cineca/prod/spack/7.1/install/linux-zen4/nvhpc-25.11-i764c3445q4fbqvjyenhfl552ixj3rcl/Linux_x86_64/25.11/comm_libs/13.0/hpcx/hpcx-2.25.1/ucc
     buildable: false
   ucx:
     externals:
     - spec: ucx@1.20.0 +cuda +thread_multiple
-      prefix: /cineca/prod/spack/7.1/install/linux-zen4/nvhpc-25.11-sucr4tx75kwothuksk6fg2ywzb5qvmw2/Linux_x86_64/25.11/comm_libs/13.0/hpcx/hpcx-2.25.1/ucx
+      prefix: /cineca/prod/spack/7.1/install/linux-zen4/nvhpc-25.11-i764c3445q4fbqvjyenhfl552ixj3rcl/Linux_x86_64/25.11/comm_libs/13.0/hpcx/hpcx-2.25.1/ucx
     buildable: false
   
