@@ -25,9 +25,9 @@ packages:
   gsl: 
     variants:
     - +external-cblas  
-  plumed:
-    require:
-    - "@2.10.0"
+  #plumed:
+  #  require:
+  #  - "@2.10.0"
   gromacs:
     require:
     - +mpi
@@ -35,8 +35,8 @@ packages:
     - +plumed
   namd: 
     require:
-    - "@3.0.2"
-    variants:
+    #- "@3.0.2"
+    #variants:
     - fftw=3  
   charmpp:
     variants:
@@ -46,8 +46,8 @@ packages:
     - +omp  
   cp2k:
     require:
-    - "@2026.1"
-    variants:
+    #- "@2026.1"
+    #variants:
     - +mpi
     - +plumed
     - +openmp 
