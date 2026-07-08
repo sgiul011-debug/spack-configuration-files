@@ -2,8 +2,9 @@ packages:
   all:
     variants:
     - +mpi
-    #compiler:
-    #- gcc@15.2.0 ~bootstrap+nvptx
+  mpi:
+    require:
+    - openmpi
   openmpi:
     require:
     - "@4.1.6"
