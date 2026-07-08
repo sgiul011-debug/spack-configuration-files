@@ -7,11 +7,3 @@ packages:
   openmpi:
     require:
     - "@4.1.6"
-    - +legacylaunchers
-    - ~wrapper-rpath
-    - ~static
-    - fabrics=ucx,ucc,cma 
-    #- ~gpfs 
-    #- +lustre
-    - ~internal-pmix 
-    - ~internal-hwloc 
