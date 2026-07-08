@@ -15,14 +15,3 @@ packages:
     #- +lustre
     - ~internal-pmix 
     - ~internal-hwloc 
-  ucc:
-    externals:
-    - spec: ucc@1.6.0
-      prefix: /cineca/prod/spack/7.1/install/linux-zen4/nvhpc-25.11-i764c3445q4fbqvjyenhfl552ixj3rcl/Linux_x86_64/25.11/comm_libs/13.0/hpcx/hpcx-2.25.1/ucc
-    buildable: false
-  ucx:
-    externals:
-    - spec: ucx@1.20.0 +cuda +thread_multiple
-      prefix: /cineca/prod/spack/7.1/install/linux-zen4/nvhpc-25.11-i764c3445q4fbqvjyenhfl552ixj3rcl/Linux_x86_64/25.11/comm_libs/13.0/hpcx/hpcx-2.25.1/ucx
-    buildable: false
-  
