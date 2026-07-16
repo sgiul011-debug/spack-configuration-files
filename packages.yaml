@@ -12,6 +12,14 @@ packages:
     require:
     - "@2.29.2"
     #- +cuda cuda_arch=90
+  llvm:
+    require:
+    - "@22.1.4" 
+    - +clang
+    #- ~cuda
+    - +flang
+    - ~libomptarget
+    - ~offload  
   python:
     require:
     - "@3.14.3"
