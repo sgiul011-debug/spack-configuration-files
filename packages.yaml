@@ -8,3 +8,42 @@ packages:
   openmpi:
     require:
     - "@4.1.6"
+  nccl:
+    require:
+    - "@2.29.2"
+    #- +cuda cuda_arch=90
+  python:
+    require:
+    - "@3.14.3"
+  py-jax:
+    require:
+    - "@0.9.0"
+    - +cuda
+    - +nccl
+  py-dask:
+    require:
+    - "@2026.3.0"
+  py-ray:
+    require:
+    - "@2.55.0"   
+    - +default    
+    #- ^bazel@7.5.0
+  py-torch:
+    require:
+    - "@2.10.0" 
+    - +ucc
+    - +nccl
+    - +openmp
+    - +numa
+    - +distributed 
+    - ~caffe2
+    - ~mpi 
+    #- +cuda
+    #- +cudnn
+    #- +cusparselt 
+    #- ~nnpack
+    #- ~xnnpack#
+    #- ~mkldnn 
+    #- +numpy 
+    - ~valgrind 
+    #+magma  ^nvtx
